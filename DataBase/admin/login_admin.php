@@ -2,15 +2,15 @@
 
 
 
-include 'conection.php';
+include '../conection.php';
 
 $correo =  $_POST['correo'];
 $contrasena = $_POST["contrasena"];
 
-$validar_login = mysqli_query($conexion, "SELECT * FROM usuario WHERE correo_electronico = '$correo' and contrasenia = '$contrasena'");
+$validar_login = mysqli_query($conexion, "SELECT * FROM administrador WHERE correo_electronico = '$correo' and contrasenia = '$contrasena'");
 
 if (mysqli_num_rows($validar_login) > 0) {
-    header("location: ../after_login/index.html");
+    header("location: ../../action_admin/index.html");
     exit;
 } else {
     echo '

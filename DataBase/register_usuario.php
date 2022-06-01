@@ -9,11 +9,11 @@ $contrasena = $_POST['contrasena'];
 $celular = $_POST['celular'];
 $direccion = $_POST['direccion'];
 
-$query = "INSERT INTO usuario(nombre_completo, correo, usuario, contrasena, celular, direccion) 
+$query = "INSERT INTO usuario(nombre, correo_electronico, usuario, contrasenia, telefono, direccion) 
                 VALUES('$nombre_completo','$correo','$usuario','$contrasena','$celular','$direccion')";
 
 //verificar correo para que no se repita
-$vereficar_correo = mysqli_query($conexion, "SELECT * FROM  usuario WHERE correo='$correo'");
+$vereficar_correo = mysqli_query($conexion, "SELECT * FROM  usuario WHERE correo_electronico='$correo'");
 
 if (mysqli_num_rows($vereficar_correo) > 0) {
     echo '
