@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-image: url(../img/pizza.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+main {
+    width: 100%;
+    padding: 20px;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.registrar_pizza {
+    display: flex;
+    width: 100%;
+    max-width: 500px;
+    top: 250px;
+    left: 400px;
+    padding: 20px 20px;
+    background: white;
+    position: absolute;
+    border-radius: 20px;
+}
+
+.registrar_pizza form button {
+    padding: 10px 40px;
+    margin-top: 40px;
+    border: none;
+    font-size: 14px;
+    background: red;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+    outline: none;
+}
+
+.registrar_pizza form input {
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    background: #F2F2F2;
+    font-size: 16px;
+    outline: none;
+}
+
+.titulo {
+    color: red;
+}
+
+.formulario_pizza {
+    opacity: 1;
+    display: block;
+}
+
+.registrar_acompanantes {
+    display: flex;
+    width: 100%;
+    max-width: 500px;
+    top: 268px;
+    left: 1000px;
+    padding: 20px 20px;
+    background: white;
+    position: absolute;
+    border-radius: 20px;
+}
+
+.registrar_acompanantes form button {
+    padding: 10px 40px;
+    margin-top: 40px;
+    border: none;
+    font-size: 14px;
+    background: red;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+    outline: none;
+}
+
+.registrar_acompanantes form input {
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    background: #F2F2F2;
+    font-size: 16px;
+    outline: none;
+}
+
+.formulario_acompanantes {
+    opacity: 1;
+    display: block;
+}

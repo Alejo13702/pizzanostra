@@ -1,24 +1,31 @@
 <?php
 
-include 'conection.php';
+include '../conection.php';
 
-$tipoPizza = $_POST['tipo_pizza'];
+$administrador_id = 1;
 $cantidad = $_POST['cantidad'];
-$tamanio = $_POST['tamanio'];
-$cantidadPorciones = $_POST['cantidad_porciones'];
+$acompaniantes = $_POST['acompaniantes'];
 $precio = $_POST['precio'];
-$tiempoPreparacion = $_POST['tiempo_preparacion'];
+$tiempo_preparacion = $_POST['tiempo_preparacion'];
 
 
-$sql = "INSERT INTO pizza VALUES('$cantidad',
-            '$tipoPizza',
-            '$tamanio',
-            '$cantidadPorciones',
-            '$precio',
-            '$tiempoPreparacion')";
+$query = "INSERT INTO acompaniantes(cantidad, acompaniantes, precio, tiempo_preparacion, administrador_id	) 
+                VALUES('$cantidad','$acompaniantes','$precio','$tiempo_preparacion', '$administrador_id')";
 
-$ejecutar = mysqli_query($con, $sql);
+$ejecutar = mysqli_query($conexion, $query);
 
-if (!$ejecutar) {
-    echo "Hubo Algun Error";
+if ($ejecutar) {
+    echo '<script>
+            
+            alert("Acompañante agregado");
+            
+        </script>';
+} else {
+    echo '<script>
+            alert("Intentalo de nuevo");
+            
+        </script>';
 }
+
+mysqli_close($conexion);
+

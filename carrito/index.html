@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="var.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="../img/pizzaico.ico">
+    <title>Carrito</title>
+</head>
+
+<body>
+
+    <input type="checkbox" class="toggle-check" id="toggle" hidden>
+    <label class="toggle" for="toggle">Menu</label>
+    <div class="container-menu">
+        <nav class="menu">
+            <a href="../after_login/index.php" class="item">Menu</a>
+            <a href="../register_login/register_login.html" class="item">Cerrar sesion</a>
+        </nav>
+    </div>
+
+    <main>
+        <div class="carrito">
+            <div>
+                <h1 class="titulo">Carrito</h1>
+                <form action="../DataBase/products/carrito.php" method="POST">
+                    <input class="controls" type="text" name="pizza" id="pizza" placeholder="Sabor de la pizza">
+                    <input class="controls" type="text" name="acompaniante" id="acompaniante" placeholder="Acompañante">
+                    <button>Comprar</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+
+
+
+</body>
+
+</html>

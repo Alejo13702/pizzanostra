@@ -2,18 +2,18 @@
 
 include 'conection.php';
 
-$nombre_completo = $_POST['nombre_completo'];
-$correo = $_POST['correo'];
+$nombre = $_POST['nombre'];
+$correo_electronico = $_POST['correo_electronico'];
 $usuario = $_POST['usuario'];
 $contrasena = $_POST['contrasena'];
-$celular = $_POST['celular'];
+$telefono = $_POST['telefono'];
 $direccion = $_POST['direccion'];
 
 $query = "INSERT INTO usuario(nombre, correo_electronico, usuario, contrasenia, telefono, direccion) 
-                VALUES('$nombre_completo','$correo','$usuario','$contrasena','$celular','$direccion')";
+                VALUES('$nombre','$correo_electronico','$usuario','$contrasena','$telefono','$direccion')";
 
 //verificar correo para que no se repita
-$vereficar_correo = mysqli_query($conexion, "SELECT * FROM  usuario WHERE correo_electronico='$correo'");
+$vereficar_correo = mysqli_query($conexion, "SELECT * FROM  usuario WHERE correo_electronico='$correo_electronico'");
 
 if (mysqli_num_rows($vereficar_correo) > 0) {
     echo '

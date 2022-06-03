@@ -1,12 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="var.css">
+    <link rel="icon" href="../img/pizzaico.ico">
+    <title>Panel de control</title>
 </head>
+
 <body>
-    <h1>Aca el admin hace cosas</h1>
+
+    <input type="checkbox" class="toggle-check" id="toggle" hidden>
+    <label class="toggle" for="toggle">Menu</label>
+    <div class="container-menu">
+        <nav class="menu">
+            <a href="../register_login/register_login.html" class="item">Cerrar sesion</a>
+        </nav>
+    </div>
+
+    <main>
+        <div class="registrar_pizza">
+            <div>
+                <h1 class="titulo">Agregar pizza</h1>
+                <form action="../DataBase/products/registrarPizza.php" method="POST" class="formulario_pizza">
+                    <input class="controls" type="text" name="tipo_pizza" id="tipo_pizza" placeholder="Sabor de la pizza">
+                    <input class="controls" type="text" name="cantidad" id="cantidad" placeholder="Cantidad">
+                    <input class="controls" type="text" name="tamanio" id="tamanio" placeholder="Tamaño de la pizza">
+                    <input class="controls" type="text" name="precio" id="precio" placeholder="Precio de la pizza">
+                    <input class="controls" type="text" name="tiempo_preparacion" id="tiempo_preparacion" placeholder="Tiempo de preparacion">
+                    <button>Registrar</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="registrar_acompanantes">
+            <div>
+                <h1 class="titulo">Agregar Acompañantes</h1>
+                <form action="../DataBase/products/registrarAcompaniante.php" method="POST" class="formulario_acompanantes">
+                    <input class="controls" type="text" name="acompaniantes" id="acompaniantes" placeholder="Acompañante">
+                    <input class="controls" type="text" name="cantidad" id="cantidad" placeholder="Cantidad">
+                    <input class="controls" type="text" name="precio" id="tamanio" placeholder="Precio">
+                    <input class="controls" type="text" name="tiempo_preparacion" id="tiempo_preparacion" placeholder="Tiempo de preparacion">
+                    <button>Registrar</button>
+                </form>
+
+            </div>
+        </div>
+    </main>
+
+
 </body>
+
 </html>

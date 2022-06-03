@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,10 +18,8 @@
     <label class="toggle" for="toggle">Menu</label>
     <div class="container-menu">
         <nav class="menu">
-            <a href="#" class="item">Inicio</a>
-            <a href="#" class="item">Menu</a>
             <a href="#" class="item">Inicio de sesion</a>
-            <a href="" class="item">Inicio admin</a>
+            <a href="../login admin/Llogin_admin.html" class="item">Inicio admin</a>
         </nav>
     </div>
 
@@ -45,7 +44,7 @@
                 <!--Login-->
                 <form action="../DataBase/login_usuario.php" method="POST" class="formulario__login">
                     <h2>Iniciar Sesión</h2>
-                    <input type="text" placeholder="Correo Electronico" name="correo">
+                    <input type="text" placeholder="Correo Electronico" name="correo_electronico">
                     <input type="password" placeholder="Contraseña" name="contrasena">
                     <button>Entrar</button>
                 </form>
@@ -53,11 +52,11 @@
                 <!--Register-->
                 <form action="../DataBase/register_usuario.php" method="POST" class="formulario__register">
                     <h2>Regístrarse</h2>
-                    <input type="text" placeholder="Nombre completo" name="nombre_completo">
-                    <input type="text" placeholder="Correo Electronico" name="correo">
+                    <input type="text" placeholder="Nombre completo" name="nombre">
+                    <input type="text" placeholder="Correo Electronico" name="correo_electronico">
                     <input type="text" placeholder="Usuario" name="usuario">
                     <input type="password" placeholder="Contraseña" name="contrasena">
-                    <input type="text" placeholder="Celular" name="celular">
+                    <input type="text" placeholder="Celular" name="telefono">
                     <input type="text" placeholder="Direccion" name="direccion">
                     <button>Regístrarse</button>
                 </form>
@@ -72,4 +71,5 @@
 
 </html>
 </body>
+
 </html>
