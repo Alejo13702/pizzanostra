@@ -9,7 +9,7 @@ $tamanio = $_POST['tamanio'];
 $precio = $_POST['precio'];
 $tiempo_preparacion = $_POST['tiempo_preparacion'];
 
-$query = "INSERT INTO pizza(tipo_pizza, cantidad, tamanio, precio, tiempo_preparacion, administrador_id	) 
+$query = "INSERT INTO pizza(tipo_pizza, cantidad, tamanio, precio, tiempo_preparacion, admin_id	) 
                 VALUES('$tipo_pizza','$cantidad','$tamanio','$precio','$tiempo_preparacion', '$administrador_id')";
 
 $ejecutar = mysqli_query($conexion, $query);
